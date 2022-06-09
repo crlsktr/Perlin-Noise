@@ -56,7 +56,7 @@ function draw() {
             particles[i].edges();
             particles[i].show();
         }
-        textSize(70); fill(255,255,255); text("Niñas",width/2,height/2);
+        textSize(width/4); fill(255,255,255); textAlign(width/2,height/2); text("Niñas");
         fr.html('FPS:' + floor(frameRate()));
     
     }
