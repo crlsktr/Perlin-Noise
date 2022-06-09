@@ -1,9 +1,9 @@
-function Particle() {
+function Particle(particleColor) {
     this.pos = createVector(random(width), random(height));
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
     this.maxspeed = 4;
-    this.particleColor = color('rgba(255, 255, 255, 0.05)');
+    this.particleColor = color(particleColor);
 
     this.prevPos = this.pos.copy();
 
@@ -29,7 +29,7 @@ function Particle() {
 
     this.show = function() {
         stroke(this.particleColor);
-        strokeWeight(1);
+        strokeWeight(10);
         line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
         this.updatePrev();
     }
