@@ -29,7 +29,7 @@ function Particle(particleColor) {
 
     this.show = function() {
         stroke(this.particleColor);
-        strokeWeight(10);
+        strokeWeight(4);
         line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
         this.updatePrev();
     }
