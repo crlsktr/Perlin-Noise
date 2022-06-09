@@ -28,11 +28,12 @@ function setup() {
     background(bg);
     button = createButton("Son...")
     button.position(width/2, height/2);
-    button.mousePressed(() => { active_sketch = true; button.hide(); textSize(70); fill(255,255,255); text("Niñas",width/2,height/2)})
+    button.mousePressed(() => { active_sketch = true; button.hide(); })
 };
 
 function draw() {
     if (active_sketch) {
+        
         var yoff = 0;
         for (var y = 0; y < rows; y++) {
             var xoff = 0;
@@ -55,7 +56,7 @@ function draw() {
             particles[i].edges();
             particles[i].show();
         }
-    
+        textSize(70); fill(255,255,255); text("Niñas",width/2,height/2);
         fr.html('FPS:' + floor(frameRate()));
     
     }
