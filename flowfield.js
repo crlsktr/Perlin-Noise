@@ -28,7 +28,7 @@ function setup() {
     background(bg);
     button = createButton("Son...")
     button.position(width/2, height/2);
-    button.mousePressed(() => { active_sketch = true; button.hide();})
+    button.mousePressed(() => { active_sketch = true; button.hide(); textSize(70); fill(255,255,255); text("Niñas",width/2,height/2)})
 };
 
 function draw() {
